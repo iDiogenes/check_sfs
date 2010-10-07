@@ -14,7 +14,7 @@ my (%files, %email);
 
 $files{'log'} = "/var/log/sfs.log"; # Log file
 $files{'pid'} = "/var/run/check_sfs.pid"; # PID
-$email{'adrs'} = "sysadm\@loni.ucla.edu"; # Email
+$email{'adrs'} = "xxxxx\@xxxx.xxxx.edu"; # Email
 
 my $debug = 0;
 my $shutdown = 0;
@@ -78,7 +78,7 @@ sub format_time {
 # Email - Make sure to change the email address and subject
 sub email {
     my $body = shift;
-    my $subject = "[loni-sys] Ardon issues";
+    my $subject = "[sys] Ardon issues";
     
     # Send Email
     system("echo \"$body\" | mailx -s \"$subject\" $email{'adrs'}");
